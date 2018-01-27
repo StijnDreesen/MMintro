@@ -28,18 +28,19 @@
 % good or even income).
 
 % (c) Remember that when x>g, the consumer receives simply x. So it also
-% gets utility associated with that x. Also remember that there is a
-% certain probability that x<g and that the consumer then simply receives g.
-% The expected utility when the insurance product exists is therefore:
+% gets utility associated with that x. Also remember that when x<g, the
+% consumer simply receives g. 
 
-% E(U) = p*E(U|x<g) + (1-p)*E(U|x>g) <=> E(U) = -p(exp(-r*g) +
-% (1-p)*E[u|x>g]
+% E(U) = E(U|x<g) +  E(U|x>g) <=> E(U) = -exp(-r*g) +
+% E[u|x>g]
 
 % (d) We now assume x is instead drawn from a standard normal distribution
 % with mean 0 and variance 1. Remember that the consumer need not pay
-% anything for the product. We now use the function surplus.m:
+% anything for the product. We now use the function Surplus.m:
 
 [g, r] = meshgrid([-3:0.1:3], [0:0.1:1.5])
 
+u = Surplus(g,r);
 
+surfc(g, r, u) 
 
