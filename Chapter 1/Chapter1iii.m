@@ -1,6 +1,9 @@
 % In this exercise we test our user-written code Utility2.m. The only
 % changes to its code compared to Utility2.m is the inclusion of a general
-% alpha as an input. We first check the special case alpha=0.5.
+% alpha as an input (the consumer preferences). See also Varian's
+% intermediate microeconomics, p. 63 (Cobb-Douglas preferences). 
+
+% We first check the special case alpha=0.5. 
 
 % Create a meshgrid covering the two-dimensional space [0,3] x [0,3].
 

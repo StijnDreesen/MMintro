@@ -6,7 +6,7 @@ function u = Utility(x1, x2, a)
 % USAGE: u  : Utility(x1, x2)
 % where: x1 : quantity of q1
 %        x2 : quantity of q2
-%        a  : utility elasticities
+%        a  : consumer preferences
 %------------------------------------------------
 % OUTPUT: u : overall utility
 %------------------------------------------------
