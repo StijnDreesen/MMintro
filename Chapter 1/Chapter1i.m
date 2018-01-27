@@ -28,8 +28,3 @@ BetaSE = diag(sqrt(VarHat)) % Note that we only need the diagonal elements.
 % They are the same! In fact, the code above is roughly the same as the one
 % in OLS.m.
 
-BetaT = BetaHat./BetaSE
-invT= -tinv(0.025,N) %
-CI = [BetaHat-invT.*BetaSE, BetaHat+invT.*BetaSE]
-BetaP = 2*(1-tcdf(abs(BetaT),N))
-
