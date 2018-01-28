@@ -1,4 +1,5 @@
-% We retake the code from Chapter 3.2:
+% We retake the code from Chapter 3.2. The method follows page 19 on
+% https://www.stata.com/manuals13/rgmm.pdf.
 
 clear; 
 DataIn = dlmread('auto.csv');
@@ -8,4 +9,22 @@ y = DataIn(:,1);
 
 % Our weight matrix is not the optimal one. The covariance matrix is then:
 
-% inv(G'WG)* (G'WVWG) * inv(G'WG)
+[N, K] = size(X)
+
+V = inv(X'*X)
+
+% Calculate covariance of residuals:
+
+yhat = X*Beta;
+u = y - yhat;
+
+C = cov(u)
+
+COV = C*V
+
+SE = sqrt(COV)
+
+% The standard errors are a bit different than the ones reported on p.6
+% (this is because the betas are also slightly off).
+
+% Note that GMM is efficient in the class of asymptotically normal estimators.
