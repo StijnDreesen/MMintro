@@ -35,3 +35,10 @@ fmincon(@(Beta)ProbitML(Beta,y,X), Beta0, [], [], [], [], lb, ub, [], opt)
 
 % Check that the estimates correspond to Stata's output (the output should
 % be 0.0016   -0.0015    3.4895).
+
+% We can do a final check with Lesage's probit function: 
+res = probit(y, X)
+prt(res)
+
+ 
+
