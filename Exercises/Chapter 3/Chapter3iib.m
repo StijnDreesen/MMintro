@@ -25,6 +25,4 @@ COV = C*V
 SE = sqrt(COV)
 
 % The standard errors are a bit different than the ones reported on p.6
-% (this is because the betas are also slightly off).
-
 % Note that GMM is efficient in the class of asymptotically normal estimators.
