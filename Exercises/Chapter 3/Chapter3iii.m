@@ -13,8 +13,7 @@ y = DataIn(:,1);
 
 [Beta2,Q] = fminsearch(@(Beta) GMM2STEP(Beta,y,X), [10,0,0]', optimset('TolX',1e-9))
 
-% The same results are found, which it should be for a linear model
-% (remember that if Z=X, then the moment equation is exactly equal to least
-% squares (just like in one-step GMM). 
+% The same results are found, which is logical (remember that if Z=X, then 
+% the moment equation is exactly equal to least squares (just like in one-step GMM). 
 
 
