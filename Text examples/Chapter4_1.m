@@ -2,9 +2,9 @@
 % Notice we seed the random number generator, meaning that a predictable
 % sequence of random numbers is generated each time. 
 
-clear;
-rng(1);                          % We set the seed.
-N      = 1000;                   % 1000 observations.
+clear;                           
+rng(1)                           % We set the seed.
+N      = 100000;                 % 1000 observations.
 Beta   = [0.5, 0.5]';            % Our true Betas.
 income = randn(N, 1)             % Generate normally distributed random numbers for income.
 x      = [ones(N, 1), income]    % Conjoin them with a vector of constants (ones).
@@ -58,8 +58,6 @@ R = 1000;       % Set the number of replications.
 opts2 = optimset('Algorithm', 'sqp', 'DiffMinChange', 1e-2); % Set the algorithm to SQP (see above) and the smallest change the function can make (the SLL is flat in the local domain).
 
 [EstBetaMSL, LL, exitflag] = fmincon(@(parameters) BinaryLogitSimulatedLL(parameters, y, x, R), Beta_init, [], [], [],[], lb, ub, [], opts2)
-
-
 
 
 
