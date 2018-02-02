@@ -1,4 +1,4 @@
-function [y, utility] = MNtest(x, betavec, J) % The function extends to J choices. It returns y, one of three choices.
+function [y, utility] = SimulateMNlogit2(x, betavec, J) % The function extends to J choices. It returns y, one of three choices.
 
 N           = size(x, 1);
 K           = size(x, 2);
