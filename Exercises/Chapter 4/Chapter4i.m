@@ -25,6 +25,6 @@ sigma = var(y)
 % For smaller N's, the mean is not always close to the expected value of y.
 % For larger N's, the mean gets closer to 0.61, the expected value. The 
 % variance stays about the same for larger sample sizes. This is in
-% accordance with the law of large numbers and the CLT. 
+% accordance with the law of large numbers and CLT. 
 
 

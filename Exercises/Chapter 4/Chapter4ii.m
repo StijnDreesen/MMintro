@@ -27,6 +27,6 @@ opts2 = optimset('Algorithm', 'sqp', 'DiffMinChange', 1e-2); % Set the algorithm
 %     0.5346     0.4322
 
 % It seems the number of observations is numerically the most important: it
-% apepars to closely approximate the true parameter. Increasing the number
+% appears to closely approximate the true parameter. Increasing the number
 % of simulations does not appear to help much (by stroke of bad luck, it
 % even worsens the estimates). 
